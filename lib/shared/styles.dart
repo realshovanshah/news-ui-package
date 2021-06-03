@@ -19,9 +19,9 @@ Decoration bottomCircularDecoration = BoxDecoration(
 );
 
 Decoration fullyCircularDecoration = BoxDecoration(
-  color: Colors.white60,
+  color: Colors.white,
   borderRadius: BorderRadius.all(
-    Radius.circular(25),
+    Radius.circular(20),
   ),
 );
 
@@ -36,14 +36,15 @@ TextStyle captionStyle = GoogleFonts.montserrat(
 );
 
 TextStyle titleStyle = GoogleFonts.sulphurPoint(
+  wordSpacing: -1,
   fontSize: 26,
   fontWeight: FontWeight.normal,
 );
 
 TextStyle textStyle = GoogleFonts.montserrat(
   fontSize: 18,
-  letterSpacing: -3,
   color: kcMediumGrey,
+  letterSpacing: -1,
   fontWeight: FontWeight.normal,
 );
 

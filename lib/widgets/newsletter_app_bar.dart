@@ -16,15 +16,15 @@ class NewsletterAppbar extends StatelessWidget implements PreferredSizeWidget {
     return SafeArea(
       child: Stack(
         children: [
+          Container(
+            margin: EdgeInsets.only(bottom: 25),
+            child: HeaderContainer(),
+          ),
           Positioned(
-            bottom: -5,
+            bottom: 0,
             left: MediaQuery.of(context).size.width / 100,
             right: MediaQuery.of(context).size.width / 100,
             child: TitleContainer(pageTitle),
-          ),
-          Container(
-            margin: EdgeInsets.only(bottom: 24),
-            child: HeaderContainer(),
           ),
         ],
       ),
@@ -32,7 +32,8 @@ class NewsletterAppbar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(200);
+  Size get preferredSize =>
+      Size.fromHeight(MediaQuery.of(context).size.height * 0.24);
   // Size.fromHeight(MediaQuery.of(context).size.height * 0.18);
 }
 
@@ -47,29 +48,37 @@ class HeaderContainer extends StatelessWidget {
     ).preferredSize}');
 
     return Container(
-      height: 150,
       decoration: bottomCircularDecoration,
       padding: const EdgeInsets.symmetric(
         horizontal: 24.0,
+        // vertical: 20,
       ),
-      child: Row(
-        // mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SizedBox(width: 16),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              NewsletterText.heading('HackerNewsLetter'),
-              NewsletterText.caption('Find the news you\'ll read.')
-            ],
-          ),
-          Spacer(),
-          Icon(
-            FontAwesomeIcons.hackerrank,
-            color: Theme.of(context).backgroundColor,
-          )
-        ],
+      child: Padding(
+        padding: EdgeInsets.only(
+          bottom: (MediaQuery.of(context).size.height * 0.03),
+        ),
+        child: Row(
+          // mainAxisSize: MainAxisSize.min,
+          // mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(width: 16),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              // mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                NewsletterText.heading('HackerNewsLetter'),
+                NewsletterText.caption('Find the news you\'ll read.'),
+              ],
+            ),
+            Spacer(),
+            Icon(
+              FontAwesomeIcons.hackerrank,
+              color: Theme.of(context).backgroundColor,
+              size: 38,
+            )
+          ],
+        ),
       ),
     );
   }
@@ -85,7 +94,7 @@ class TitleContainer extends StatelessWidget {
       child: Container(
         decoration: fullyCircularDecoration,
         width: MediaQuery.of(context).size.width * 0.6,
-        height: MediaQuery.of(context).size.height * 0.09,
+        height: MediaQuery.of(context).size.height * 0.08,
         child: Center(child: NewsletterText.title(pageTitle)),
       ),
     );

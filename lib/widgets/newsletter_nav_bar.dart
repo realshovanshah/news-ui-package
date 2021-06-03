@@ -13,9 +13,9 @@ class NewsletterNavBar extends StatelessWidget {
       color: Theme.of(context).backgroundColor,
       child: DraggableScrollableSheet(
         expand: false,
-        initialChildSize: 0.12,
-        minChildSize: 0.12,
-        maxChildSize: 0.8,
+        initialChildSize: 0.15,
+        minChildSize: 0.15,
+        // maxChildSize: 0.8,
         builder: (BuildContext context, ScrollController scrollController) {
           return CustomScrollView(
             shrinkWrap: true,
