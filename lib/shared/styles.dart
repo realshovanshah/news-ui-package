@@ -36,19 +36,24 @@ TextStyle captionStyle = GoogleFonts.montserrat(
 );
 
 TextStyle titleStyle = GoogleFonts.sulphurPoint(
-  wordSpacing: -1,
+  wordSpacing: -5,
   fontSize: 26,
   fontWeight: FontWeight.normal,
 );
 
+TextStyle miniTitleStyle = GoogleFonts.sulphurPoint(
+  wordSpacing: -5,
+  fontSize: 20,
+  fontWeight: FontWeight.normal,
+);
+
 TextStyle textStyle = GoogleFonts.montserrat(
-  fontSize: 18,
+  fontSize: 20,
   color: kcMediumGrey,
-  letterSpacing: -1,
   fontWeight: FontWeight.normal,
 );
 
 TextStyle subTextStyle = GoogleFonts.openSans(
-  fontSize: 14,
+  fontSize: 13,
   fontWeight: FontWeight.w300,
 );
