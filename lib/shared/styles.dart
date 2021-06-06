@@ -31,7 +31,7 @@ TextStyle headingStyle = GoogleFonts.sulphurPoint(
     color: const Color(0xCC000000));
 
 TextStyle captionStyle = GoogleFonts.montserrat(
-  fontSize: 16,
+  fontSize: 17,
   fontWeight: FontWeight.w300,
 );
 

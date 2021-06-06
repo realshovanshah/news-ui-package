@@ -45,7 +45,7 @@ class NewsletterDetailedCard extends StatelessWidget {
                 child: NewsletterText.caption('121'),
               ),
             ),
-          )
+          ),
         ],
       ),
     );
